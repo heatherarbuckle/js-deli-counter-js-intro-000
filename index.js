@@ -13,12 +13,15 @@ function nowServing(katzDeliLine) {
   }
 }
 
+var line = [];
+
 function currentLine(katzDeliLine) {
-  if (katzDeliLine.length > 1) {
     for (var i = 0; i < katzDeliLine.length; i++) {
-    return `The line is currently: ${i}. ${datzDeliLine[i]}, `
+      line.push(` ${i}. {katzDeliLine[i]}`);
     }
-  } else {
+    if (katzDeliLine.length > 1) {
+      return `The line is currently: ${line}`
+    } else {
     return `The line is currently empty.`;
   }
 }
